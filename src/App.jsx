@@ -6,11 +6,15 @@ import Home from "./pages/Home";
 import { AuthProvider } from "./context/AuthContext";
 import Profile from "./pages/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
+import { ToastContainer } from "react-toastify";
+
 
 const App = () => {
   return (
   <AuthProvider>
       <Router>
+      <ToastContainer />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
